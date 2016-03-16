@@ -31,9 +31,9 @@ dev_requires = [
     'ipython',
 ]
 
-setup(name='testapp',
+setup(name='learning-journal',
       version='0.0',
-      description='testapp',
+      description='learning-journal',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
                   "Programming Language :: Python",
@@ -48,12 +48,12 @@ setup(name='testapp',
       packages=find_packages(),
       include_package_data=True,
       zip_safe=False,
-      test_suite='testapp',
+      test_suite='learning-journal',
       install_requires=requires,
       entry_points="""\
       [paste.app_factory]
-      main = testapp:main
+      main = learning-journal:main
       [console_scripts]
-      initialize_testapp_db = testapp.scripts.initializedb:main""",
+      initialize_db = learning-journal.scripts.initializedb:main""",
       extras_require={'test': test_requires, 'dev': dev_requires},
       )
