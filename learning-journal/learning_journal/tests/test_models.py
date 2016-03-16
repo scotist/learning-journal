@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-from learning_journal.models import MyModel, DBSession
+from learning_journal.models import Entry, DBSession
 
 
-def test_create_mymodel(dbtransaction):
-    new_model = MyModel(name="Norton", value=42)
+def test_create_entry(dbtransaction):
+    new_model = Entry(title="Norton", text="waffles")
     assert new_model.id is None
     DBSession.add(new_model)
     DBSession.flush()
